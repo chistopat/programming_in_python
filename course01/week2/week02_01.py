@@ -42,7 +42,7 @@ if __name__ == '__main__':
     open(storage_path, 'a').close()
 
     with open(storage_path, mode='r') as storage_file:
-        print("Storage file is:", storage_path)
+        # print("Storage file is:", storage_path)
         storage_raw = storage_file.read()
         storage_data = validate_file(storage_raw)
 
@@ -51,5 +51,5 @@ if __name__ == '__main__':
     else:
         with open(storage_path, 'w') as storage_file:
             storage_file.write(json.dumps(write_value(args.key, args.val, storage_data)))
-            print("New pair key/value successfully written")
+            # print("New pair key/value successfully written")
 
